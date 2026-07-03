@@ -8,7 +8,7 @@ void real_noexcept() noexcept{
 
 void fake_noexcept() noexcept{
     cout << "fake_noexcept\n";
-    throw 1; // 정수 형식 예외 발생
+    // throw 1; // 정수 형식 예외 발생
 }
 
 int main(){
