@@ -21,6 +21,8 @@ int main(){
             throw 'Z';
             cout << "after throw Z" << endl;
         }
+    } catch(int a){
+        cout << "catch " << a << endl;
     } catch(...){
         cout << "catch all" << endl;
     }
