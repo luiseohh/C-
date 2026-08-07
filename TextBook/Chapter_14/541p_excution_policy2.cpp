@@ -18,7 +18,7 @@ public:
 };
 
 int main(){
-    unique_ptr<class_obj> unique_pointer(new class_obj);
+    unique_ptr<class_obj> unique_pointer(new class_obj());
     unique_pointer->print_out();
 
     return 0;
