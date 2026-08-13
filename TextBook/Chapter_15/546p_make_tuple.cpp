@@ -112,14 +112,15 @@ int main(){
     cout << "After swap tuple's value\n";
     print_out_tuple(monster_b_status_temp);
 
+    //tuple_cat -> 튜플 합치기, moster_a 가 tuple<int, string>이고 monster_b 가 tuple<int, int>라면
+    //monster_status_all 은 tuple<int, string, int,int>로 변환해 준다.
     auto monster_status_all = tuple_cat(monster_a_status, monster_b_status);
     cout << "After call tuple_cat : {";
     print_out_tuple_second<
-        decltype(monster_status_all),
-        tuple_size<decltype(monster_status_all)>::value
+        decltype(monster_status_all), // decltype -> type이 뭔지 알아내줘 라는 뜻, monster_status_all 대신 쓴거임
+        tuple_size<decltype(monster_status_all)>::value // 튜플 안에 요소가 총 몇개가 들어있는지 컴파일 시점에서 알려준다.
         >::show(monster_status_all);
-
-    cout << "}\n";
+        cout << "}\n";
 
     return 0;
 }
